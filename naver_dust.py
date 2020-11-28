@@ -13,15 +13,20 @@ data1 = soup.find("div", {"class": "detail_box"})
 
 data2 = data1.findAll("dd")
 # pprint(data2)
+good_day = data1.find("dd").text
+good_day_slice = good_day[-2:]
+# print(good_day_slice)
 
-# good_day = data1.find("dd", {"class": "lv2"}).text
-# print(good_day)
+oh = data2[0].text
+oh_slice = oh[-2:]
+print(oh_slice)
 
 fine_dust = data2[0].find("span", {"class": "num"}).text
-print(fine_dust)
+# print(fine_dust)
 
 ultra_fine_dust = data2[1].find("span", {"class": "num"}).text
-print(ultra_fine_dust)
+# print(ultra_fine_dust)
 
 ozone = data2[2].find("span", {"class": "num"}).text
-print(ozone)
+
+# print(ozone)
