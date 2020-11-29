@@ -148,3 +148,6 @@ dmypy.json
 *.png
 
 image/
+
+Real_Selenium/
+*.exe
