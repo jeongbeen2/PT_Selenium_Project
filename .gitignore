@@ -140,3 +140,11 @@ dmypy.json
 
 # profiling data
 .prof
+
+
+# Image File
+*.img
+*.jpg
+*.png
+
+image/
