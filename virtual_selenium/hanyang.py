@@ -1,34 +1,29 @@
+import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.remote.command import Command
-import time
+from selenium.webdriver.common.alert import Alert
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
-driver.get("https://learning.hanyang.ac.kr/courses/11565/external_tools/1")
+driver.get("https://learning.hanyang.ac.kr/courses/11565/external_tools/3")
 
-
+# Login #
 id_bar = driver.find_element_by_id("uid")
-
-id_bar.send_keys("id")
-time.sleep(2)
-
 pw_bar = driver.find_element_by_id("upw")
-
-pw_bar.send_keys("password")
-time.sleep(2)
-
+id_bar.send_keys("id")
+pw_bar.send_keys("pw")
 pw_bar.send_keys(Keys.ENTER)
-time.sleep(3)
-login_btn = driver.find_element_by_id("login_btn")
-login_btn.click()
-# pw_bar.send_keys(Keys.ENTER)
+Alert(driver).accept()
 
+# Video Scrap #
+movies = driver.find_elements_by_class_name("movie")
+print(movies)
 
-title = driver.find_elements_by_class_name("xnslh-section-title")
+weeks = driver.find_elements_by_class_name("xns-subsection-container")
+for index, week in enumerate(weeks):
+    print(index)
 
-second_title = title[1]
-
-second_title.click()
-
-# driver.quit()
+driver.quit()
