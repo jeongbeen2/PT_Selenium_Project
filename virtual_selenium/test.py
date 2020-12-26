@@ -5,3 +5,4 @@ for l in range(0,30,3):
 
 for i, j in enumerate(h):
     print(f"{i},{j}")
+

@@ -24,4 +24,4 @@ for index, search_result in enumerate(search_results):
     search_result.screenshot(f"screenshots/{KEYWORD}x{index}.png")
 
 
-# driver.quit()
+driver.quit()
