@@ -27,3 +27,4 @@ for index, week in enumerate(weeks):
     print(index)
 
 driver.quit()
+
