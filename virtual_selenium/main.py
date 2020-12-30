@@ -16,7 +16,9 @@ search_bar.send_keys(KEYWORD)
 search_bar.send_keys(Keys.ENTER)
 
 shitty_element = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME, "g-blk")))
+
 search_results = driver.find_elements_by_class_name("g")
+
 for index, search_result in enumerate(search_results):
     
     class_name = search_result.get_attribute("class")
