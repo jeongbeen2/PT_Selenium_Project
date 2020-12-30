@@ -14,7 +14,6 @@ driver.implicitly_wait(300)
 
 num = 1
 
-
 def clickBtn():
     global num
     btns = driver.find_elements_by_xpath('//*[@id="grid"]/div[*]')
