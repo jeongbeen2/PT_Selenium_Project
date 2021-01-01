@@ -10,6 +10,7 @@ driver = webdriver.Chrome("Real_Selenium/chromedriver")
 # driver = webdriver.Chrome(executable_path="chromedriver", options=options)
 driver.get("https://www.youtube.com/")
 
+
 sleep(3)
 
 """ 
